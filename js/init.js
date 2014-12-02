@@ -105,6 +105,26 @@
 
 		// Main Sections: Two.
 		
+        $('.category-selector').click(function(){
+          var clickedCategory = $(this).text();
+          console.log(clickedCategory);
+
+          $('.all-category').hide();
+          switch(clickedCategory){
+            case 'all':
+              $('.all-category').show();
+            break;
+            case 'video':
+              $('.video').show();
+            break;
+            case 'graphic':
+              $('.graphic').show();
+            break;
+            case 'article':
+              $('.article').show();
+            break;
+          }
+        });
 			// Lightbox gallery.
 				$('#one').poptrox({
 					caption: function($a) { return $a.next('h3').text(); },
