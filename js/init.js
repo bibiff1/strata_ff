@@ -107,8 +107,6 @@
 		
         $('.category-selector').click(function(){
           var clickedCategory = $(this).text();
-          console.log(clickedCategory);
-
           $('.all-category').hide();
           switch(clickedCategory){
             case 'all':
@@ -124,6 +122,9 @@
               $('.article').show();
             break;
           }
+          $('#full-portfolio-button').text('Recent Work');
+          $('#full-portfolio-button').attr('data-toggle', '0');
+          $('.full-portfolio').show();
         });
 			// Lightbox gallery.
 				$('#one').poptrox({
@@ -143,17 +144,21 @@
 				$('.full-portfolio').hide();
 
 				$('#full-portfolio-button').click(function(){
-					$('.full-portfolio').toggle();
-
-					if ($('#full-portfolio-button').attr('data-toggle') === '1') {
-						$('#full-portfolio-button').text('Recent Work');
-						$('#full-portfolio-button').attr('data-toggle', '0');
-					}else{
-						$('#full-portfolio-button').text('Full Portfolio');
-						$('#full-portfolio-button').attr('data-toggle', '1');
-					}
+          toggleFullPortfolio();
 				});
 
 	});
 
 })(jQuery);
+
+function toggleFullPortfolio(){
+  $('.full-portfolio').toggle();
+
+  if ($('#full-portfolio-button').attr('data-toggle') === '1') {
+    $('#full-portfolio-button').text('Recent Work');
+    $('#full-portfolio-button').attr('data-toggle', '0');
+  }else{
+    $('#full-portfolio-button').text('Full Portfolio');
+    $('#full-portfolio-button').attr('data-toggle', '1');
+  }
+}

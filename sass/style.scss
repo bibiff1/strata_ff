@@ -846,7 +846,8 @@ $size-header-pad:		4em;
 
 	.work-item {
 		margin: 0 0 $size-element-margin 0;
-		
+    height: 26em;
+
 		.image {
 			margin: 0 0 ($size-element-margin * 0.75) 0;
 		}
