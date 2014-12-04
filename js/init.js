@@ -106,26 +106,32 @@
 		// Main Sections: Two.
 		
         $('.category-selector').click(function(){
-          var clickedCategory = $(this).text();
-          $('.all-category').hide();
-          switch(clickedCategory){
-            case 'all':
-              $('.all-category').show();
-            break;
-            case 'video':
-              $('.video').show();
-            break;
-            case 'graphic':
-              $('.graphic').show();
-            break;
-            case 'article':
-              $('.article').show();
-            break;
-          }
+          // Full portfolio needs to be shown first.
           $('#full-portfolio-button').text('Recent Work');
           $('#full-portfolio-button').attr('data-toggle', '0');
           $('.full-portfolio').show();
+
+          var clickedCategory = $(this).attr('data-category');
+          $('.all-category').hide();
+          switch(clickedCategory){
+            case '0':
+              $('.all-category').show();
+            break;
+            case '1':
+              $('.photo').show();
+            break;
+            case '2':
+              $('.article').show();
+            break;
+            case '3':
+              $('.video').show();
+            break;
+            case '4':
+              $('.motion-graphic').show();
+            break;
+          }
         });
+
 			// Lightbox gallery.
 				$('#one').poptrox({
 					caption: function($a) { return $a.next('h3').text(); },
