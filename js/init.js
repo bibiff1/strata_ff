@@ -111,6 +111,10 @@
           $('#full-portfolio-button').attr('data-toggle', '0');
           $('.full-portfolio').show();
 
+          // Change the active class.
+          $('.category-nav .active').removeClass('active');
+          $(this).addClass('active');
+          
           var clickedCategory = $(this).attr('data-category');
           $('.all-category').hide();
           switch(clickedCategory){
@@ -118,16 +122,18 @@
               $('.all-category').show();
             break;
             case '1':
-              $('.photo').show();
+              $('.videos').show();
             break;
             case '2':
-              $('.article').show();
+              $('.infographics').show();
             break;
             case '3':
-              $('.video').show();
+              $('.motion-graphics').show();
             break;
             case '4':
-              $('.motion-graphic').show();
+              $('.prints').show();
+            case '5':
+              $('.interactive-graphics').show();
             break;
           }
         });

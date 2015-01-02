@@ -1149,3 +1149,26 @@ $size-header-pad:		4em;
 		}
 
 	}
+
+/* Category */
+	.category-nav a{
+		font-size: 1.1em;
+		color: $color-category-nonactive;
+		border-bottom: 0px;
+	}
+
+	.category-nav a:first-child{
+		padding-right: 10px;
+	}
+
+	.category-nav a + a{
+		border-left: solid 1px $color-border2-bg;
+		padding: 0px 10px;
+	}
+
+	.category-nav .active{
+		color: $color-category-active;
+		text-decoration: none;
+	}
+
+

@@ -991,4 +991,21 @@ body.is-touch .poptrox-popup .nav-previous,
 body.is-touch .poptrox-popup .closer {
   opacity: 1.0 !important; }
 
+/* Category */
+.category-nav a {
+  font-size: 1.1em;
+  color: #337ab7;
+  border-bottom: 0px; }
+
+.category-nav a:first-child {
+  padding-right: 10px; }
+
+.category-nav a + a {
+  border-left: solid 1px #e7e7e7;
+  padding: 0px 10px; }
+
+.category-nav .active {
+  color: #777;
+  text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map */
